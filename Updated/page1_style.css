@@ -184,7 +184,7 @@ body
   }
   
   .username{
-    font-size: 12px;
+    font-size: 20px;
     font-weight: 900;
     padding: 0% 17%;
     margin-left: auto;
@@ -199,7 +199,7 @@ body
   }
   
   .submission-date{
-    font-size: 10px;
+    font-size: 14px;
     font-style: italic;
     padding: 0% 17%;
   }
@@ -214,9 +214,10 @@ body
   }
   
   .rating {
-    font-size: 16px;
+    display: block;
+    font-size: 20px;
     font-weight: bolder;
-    padding: 5px 40px;
+    padding: 0px 40px 20px 40px;
     background-color: #598272;
   }
   
