@@ -1,0 +1,85 @@
+body
+{
+	background-color: black;
+	color: white;
+}
+
+
+.h1
+{
+	color: white;
+}
+
+.cover
+{
+  text-align: center;
+
+  display: block;
+}
+
+.movie-infos .movie-title
+{
+	background-color: black;
+	border-radius: 10px;
+	padding: 10px;
+	text-align: center;
+	display: block;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.movie-infos
+{
+	margin-left: 10%;
+	margin-right: 10%;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: rgb(66, 65, 65);
+	border-radius: 10px;
+	padding: 10px;
+	word-wrap: break-word;
+    
+}
+
+.movie-infos pre
+{
+   font-size: 25px;
+}
+
+.post
+{
+	margin-left: 10%;
+	margin-right: 10%;
+	background-color: rgb(253, 253, 253);
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.author-picture{
+    
+	border-radius: 100px;
+	background-color: white;
+	margin-right: 30%;
+ 
+}
+
+.author-picture img{
+	margin-top: 20px;
+	margin-left: 20px;
+	border-radius: 100px;
+
+ 
+}
+
+
+.comment-header{
+  
+    padding: 0 0 0 25px;
+    margin-left: 0;
+  }
+
+.movie-title{
+    text-decoration: underline;
+    display: inline;
+    font-style: italic;
+    font-weight: bold;
+}
+
