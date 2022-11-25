@@ -10,7 +10,7 @@ const Movies = require('./models/Movies');
 const app = express();
 
 // CONNECT TO MONGODB
-const uri = "mongodb+srv://admin:adminpassword@CCAPDEV.4i3mcim.mongodb.net/?retryWrites=true&w=majority"
+const uri = "mongodb+srv://admin:adminpassword@CCAPDEV.4i3mcim.mongodb.net/phase2?retryWrites=true&w=majority"
 mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true})
         .then(() => app.listen(3000, function(){
             console.log("Server started on port 3000");
