@@ -1,0 +1,63 @@
+const https = require("https");
+const express = require("express");
+
+
+
+const app = express();
+// app.use(express.static("/images")) //idk if tama di gumagana
+app.use(express.static("/style.css")) // idk if tama di gumagana
+app.use('/static', express.static(__dirname + '/images')); 
+
+app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/images"));
+
+// EJS 
+app.set('view engine', 'ejs');
+
+// INDEX
+app.get("/",function(req,res){
+    res.sendFile(__dirname +"/index.html");
+});
+
+
+// Descriptions
+var interstellarDesc = "Interstellar is a 2014 science fiction film co-written, directed and produced by Christopher Nolan.It stars Matthew McConaughey, Anne Hathaway, Jessica Chastain, Bill Irwin, Ellen Burstyn, Matt Damon, and Michael Caine.Set in a dystopian future where humanity is struggling to survive, the film follows a group of astronauts who travel through a wormhole near Saturn in search of a new home for mankind.";
+var days500Desc = "Tom (Joseph Gordon-Levitt), greeting-card writer and hopeless romantic, is caught completely off-guard when his girlfriend, Summer (Zooey Deschanel), suddenly dumps him. He reflects on their 500 days together to try to figure out where their love affair went sour, and in doing so, Tom rediscovers his true passions in life.";
+var opDesc = "Uta is a beloved singer, renowned for concealing her own identity when performing. Her voice is described as  otherworldy Now, for the first time ever, Uta will reveal herself to the world at a live concert.";
+ // PAGES 
+    // Interstellar
+app.get("/interstellar",function(req,res){
+    var data = { 
+    movieTitle: "Interstellar",
+     movieDesc: interstellarDesc,
+     moviePoster: "interstellar.jpg" }
+    res.render("moviePage.ejs", data );
+    console.log("ENTERED RES REnder");
+});
+    // 500 days
+    app.get("/500Days",function(req,res){
+        var data = { 
+            movieTitle: "500 Days of Summer",
+             movieDesc: days500Desc,
+             moviePoster: "500daysposter.jpg" }
+        res.render("moviePage.ejs", data );
+        console.log("ENTERED RES REnder");
+    });
+     // One Piece
+    app.get("/OnePiece",function(req,res){
+        var data = { 
+            movieTitle: "One Piece: Film Red",
+             movieDesc: opDesc,
+             moviePoster: "OPposter.jpg" }
+        res.render("moviePage.ejs", data );
+        console.log("ENTERED RES REnder");
+    });
+
+    app.get("/login",function(req,res){
+        res.render("userin.ejs");
+        console.log("ENTERED RES REnder");
+    });
+
+app.listen(3000, function(){
+    console.log("Server started on port 3000");
+});
