@@ -1,0 +1,6 @@
+COVERAGE
+
+event
+incident
+problem
+request fulfillment
