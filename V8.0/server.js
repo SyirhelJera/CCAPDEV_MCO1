@@ -4,8 +4,8 @@ const mongoose = require('mongoose');
 const ejs = require('ejs');
 const { connect } = require('http2');
 const Movie = require('./models/Movies');
-const Movies = require('./models/Movies');
-
+const User = require('./models/User');
+const Post = require('./models/Post');
 
 const app = express();
 
